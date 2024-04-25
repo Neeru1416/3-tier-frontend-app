@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image:  Neeru1416/3-tier-frontend-app:VERSION
+        image:  neeru1416/three-tier:VERSION
         ports:
         - containerPort: 3000
 ---
