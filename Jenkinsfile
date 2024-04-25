@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'Docker-Node'
+        label 'jumpserver'
     }
 
     environment {
@@ -12,7 +12,7 @@ pipeline {
     stages {
        stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/persevcareers/Final-Project-Frontend.git'
+                git branch: 'main', url: 'https://github.com/Neeru1416/3-tier-frontend-app.git'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     def dockerfilePath = '.'
-                    sh "sudo docker build -t 'persevcareers6577/perseverance-project:${version}' ."
+                    sh "sudo docker build -t ':${version}' ."
                 }
             }
         }
