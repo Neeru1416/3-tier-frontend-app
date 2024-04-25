@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     def dockerfilePath = '.'
-                    sh "sudo docker build -t ':${version}' ."
+                    sh "sudo docker build -t 'neeru1416/three-tier:${version}' ."
                 }
             }
         }
